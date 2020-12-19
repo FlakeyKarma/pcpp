@@ -1,14 +1,13 @@
 #include <iostream>
 #include <vector>
 #include "string.h"
-#include "termios.h"
 
 class PostCPP {
 public:
   //Used to initialize db connection
   struct user_session_variables {
-    //Helpers object to use
-    //helpers *H = new helpers;
+    //Set constructor used
+    std::vector<bool> *con_used = new std::vector<bool>(2);
     //username variable
     unsigned char *user = (unsigned char *)calloc('\0', 24);
     //password variable
